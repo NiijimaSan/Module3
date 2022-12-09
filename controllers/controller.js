@@ -155,6 +155,12 @@ const controller = {
             }
         });
 
+    },
+
+    
+    homepage: function(req, res) {
+        res.render('homepage')
     }
+    
 }
 module.exports =  controller;
