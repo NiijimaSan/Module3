@@ -16,7 +16,7 @@ router.post('/deleteUser', userController.deleteUser)
 // router.get('/', controller.signup);
 router.get('/home', controller.home);
 router.get('/profile', controller.profile);
-// router.get('/qualification', controller.qualification);
+router.get('/qualification', controller.qualification);
 // router.get('/signup', controller.signup);
 // router.get('/registration', controller.registration);
 router.get('/searchJob', controller.searchJob);
