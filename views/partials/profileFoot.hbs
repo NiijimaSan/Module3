@@ -1,0 +1,34 @@
+<div class="row gutters-sm">
+  <div class="col-sm-6 mb-3">
+    <div class="card h-100">
+      <div class="card-body">
+        <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>Project Status</h6>
+        {{! for each cred or job}}
+        {{#each creds}}
+        {{#ifFifth @index}}
+        <small>{{title}}</small>
+        <div class="progress mb-3" style="height: 5px">
+          <div class="progress-bar bg-primary" role="progressbar" style={{#progressWidth value}}{{/progressWidth}}
+            aria-valuenow={{value}} aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="card h-100">
+      <div class="card-body">
+        <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>Project Status
+        </h6>
+        {{else}}
+        <small>{{title}}</small>
+        <div class="progress mb-3" style="height: 5px">
+          <div class="progress-bar bg-primary" role="progressbar" style={{#progressWidth value}}{{/progressWidth}}
+            aria-valuenow={{value}} aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        {{/ifFifth}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+</div>

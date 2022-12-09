@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-body">
+        <div class="d-flex flex-column align-items-center text-center">
+            <img src={{profilePicture}} alt="Admin" class="rounded-circle" width="150">
+            <div class="mt-3">
+                <h4>{{name}}</h4>
+                <p class="text-secondary mb-1">{{job}}</p>
+                <p class="text-secondary mb-1">{{company}}</p>
+                <p class="text-muted font-size-sm">{{jobAddress}}</p>
+
+                {{#switch status}} 
+                    {{#case "Currently Employed"}}
+                        <span class="label label-primary">{{status}}</span>
+                    {{/case}} 
+                    {{#case "Open to Career Oppurtunities"}}
+                        <span class="label label-info">{{status}}</span>
+                    {{/case}}
+                    {{#case "Actively Recruiting"}}
+                        <span class="label label-success">{{status}}</span>
+                    {{/case}}
+                {{/switch}}
+
+                <p></p>
+                <button class="btn btn-primary">Follow</button>
+                <button class="btn btn-outline-primary">Message</button>
+            </div>
+        </div>
+    </div>
+</div>

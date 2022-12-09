@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+		<title>Search qualifications</title>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel ="stylesheet"/>
+		<link rel="stylesheet" href="css/style-qual.css">
+	</head>
+    <body>
+		
+			<!-- sidebar -->
+	<body>
+		{{> sidebar}}
+	<!-- sidebars ends -->
+	
+        <div class="container">
+        <header>Search by Qualification</header>
+        <br>
+        <form action ="/showJobseekerQ" method="POST">
+        <div class="details">
+            <span class="title">Latin Honors</span>
+            <input type="checkbox" value="summa" id ="A-1">
+            <input type="checkbox" value="magna" id ="A-2">
+            <input type="checkbox" value="cumlaude" id ="A-3">
+            <div class="category">
+                <label for="A-1">
+                    <span class="dot one"></span>
+                    <span class="latinhonor">Summa Cum Laude</span>
+                </label>
+                
+                <label for="A-2">
+                    <span class="dot two"></span>
+                    <span class="latinhonor">Magna Cum Laude</span>
+                </label>
+                
+                <label for="A-3">
+                    <span class="dot three"></span>
+                    <span class="latinhonor">Cum Laude</span>
+                </label>
+            </div>
+        <div class="details">
+            <span class="title">Experience</span>
+            <input type="checkbox" value ="1 year"  id ="B-1">
+            <input type="checkbox" value ="2 years" id ="B-2">
+            <input type="checkbox" value ="3 years" id ="B-3">
+            <div class="category">
+                <label for="B-1">
+                    <span class="dot one"></span>
+                    <span class="year">1 Year</span>
+                </label>
+                
+                <label for="B-2">
+                    <span class="dot two"></span>
+                    <span class="year">2 Years</span>
+                </label>
+                
+                <label for="B-3">
+                    <span class="dot three"></span>
+                    <span class="year">3+ Years</span>
+                </label>
+            </div>
+        <div class="details">
+            <span class="title">Degree of Education</span>
+            <input type="checkbox" value="college" id ="C-1">
+            <input type="checkbox" value="master" id ="C-2">
+            <input type="checkbox" value="doctor" id ="C-3">
+            <div class="category">
+                <label for="C-1">
+                    <span class="dot one"></span>
+                    <span class="education">College Graduate</span>
+                </label>
+                
+                <label for="C-2">
+                    <span class="dot two"></span>
+                    <span class="education">Masteral</span>
+                </label>
+                
+                <label for="C-3">
+                    <span class="dot three"></span>
+                    <span class="education">Doctorate</span>
+                </label>
+            </div>
+            <div class="details">
+                <span class="title">Preferred Work Setup</span>
+                <input type="checkbox" value ="wfh" id ="D-1">
+                <input type="checkbox" value ="onsite" id ="D-2">
+                <input type="checkbox" value ="hybrid" id ="D-3">
+                <div class="category">
+                    <label for="D-1">
+                        <span class="dot one"></span>
+                        <span class="worksetup">Work From Home</span>
+                    </label>
+                    
+                     
+                    <label for="D-2">
+                        <span class="dot two"></span>
+                        <span class="worksetup">Onsite</span>
+                    </label>
+                    
+                    <label for="D-3">
+                        <span class="dot three"></span>
+                        <span class="worksetup">Hybrid</span>
+                    </label>
+                </div>
+                <div class="details">
+                    <span class="title">Position Applying To</span>
+                    <input type="checkbox" value ="intern" id ="E-1">
+                    <input type="checkbox" value ="manager" id ="E-2">
+                    <input type="checkbox" value ="secretary" id ="E-3">
+                    <div class="category">
+                        <label for="E-1">
+                            <span class="dot one"></span>
+                            <span class="position">Intern</span>
+                        </label>
+                        
+                        <label for="E-2">
+                            <span class="dot two"></span>
+                            <span class="position">Manager</span>
+                        </label>
+                        
+                        <label for="E-3">
+                            <span class="dot three"></span>
+                            <span class="position">Secretary</span>
+                        </label>
+                    </div>
+                </div>           
+                    <div class="button">
+                        <input type="submit" class="button" onclick="myFunction()" value="Search">
+                    </div>
+                </div>
+    {{!-- <div class="result">
+        <h3>Hazel Samantha Cruz</h3>
+        <pre class="employee">
+                        1 Year Experience in Manila Bulletin
+                        College Graduate
+                        Hybrid
+                        Manager
+        </pre>
+    </div> --}}
+    </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="qual.js"></script>
+    <script>
+    $(".result").hide();
+    </script>
+    </body>
+</html>

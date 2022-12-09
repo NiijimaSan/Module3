@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<meta charset ="utf-8">
+		<title>Co-WorkBook sign up or log in</title>
+		<link rel="stylesheet" href="/css/style-signup.css">
+	</head>
+
+	<body>	
+		<header class="header">
+			<h1>Co-WorkBook</h1>
+		</header>
+		
+{{!-- <script src="scripts/scripts.js"></script> --}}
+	
+		<div class="centerBox">
+			<h2>Sign Up</h2>
+			{{> messages}}
+			<form action="/login" name="myForm" method="POST">
+				<div class="inputBox">
+					<input type="text" name="username" required="required">
+					<span></span>
+					<label for ="username">Username</label>
+
+				</div>
+				
+				<div class="inputBox">
+					<input type="password" name="password" required="required">
+					<span></span>
+					<label for="password">Password</label>
+
+				</div>
+				
+        <div class="forpass">Forgot Password?</div>
+			<input type="submit" value="Login">
+			<div class="reg_link">Not a member? <a href="/register">Register Now!</a></div>
+		</form>
+	</body>
+	
+</html>

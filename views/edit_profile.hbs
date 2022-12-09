@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit Profile</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudfare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style-test.css">
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <h2>Edit My Profile</h2>
+            <form action="/updateUserNow" method ="POST">
+                <input type="hidden" value="{{user.id}}" name="id">
+                <!-- Profile Pic -->
+                <!-- <div class="form-group">
+                    <label for="profpic">Profile Picture: </label>
+                    <div class="profile-pic-div">
+                        <img src="defaultPic.png" id="photo">
+                        <input type="file" id="file">
+                        <label for="file" id="uploadBtn">Choose Photo</label>
+                    </div>
+                </div> -->
+                {{!-- <br><br><br>     --}}
+                 <!-- Editing Name -->
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Name" value="{{user.name}}"  name="name" required>
+                </div>
+
+                <!-- Editing User Type -->
+                <div class="form-group">
+                    <label for="user_type">User Type: </label>
+                    <input type="text" class="form-control" id="user_type" placeholder="Enter User Type" value="{{user.user_type}}" name="user_type" required>
+                </div>
+
+                <!-- Editing Bio -->
+                <div class="form-group">
+                    <label for="bio">Bio </label>
+                    <input type="text" class="form-control" id="bio" placeholder="Enter Bio" value="{{user.bio}}" name="bio" required>
+                </div>
+
+                <!-- Editing Email -->    
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter Email" value="{{user.email}}" name="email" required>
+                </div>
+
+                <!-- Editing Phone/Mobile No.: -->
+                <div class="form-group">
+                    <label for="phone_no">Phone No: </label>
+                    <input type="text" class="form-control" id="phone_no" placeholder="Enter Phone/Mobile No." value="{{user.phone_no}}" name="phone_no" required>
+                </div>
+
+                <!-- Editing Address -->    
+                <div class="form-group">
+                    <label for="address">Address: </label>
+                    <input type="text" class="form-control" id="address" placeholder="Enter Address or type 'N/A'" value="{{user.address}}" name="address" required>
+                </div>
+                
+                
+                <!-- Editing Qualifications -->
+                <div class="form-group">
+                    <label for="qualifs">Qualifications: </label>
+                    <input type="text" class="form-control" id="qualifs" placeholder="Kindly fill this out if you are a JOBSEEKER, otherwise, type 'N/A'" value="{{user.qualifs}}" name="qualifs" required>
+                </div>
+
+                <!-- Editing Twitter -->
+                <div class="form-group">
+                    <label for="twitter">Twitter </label>
+                    <input type="text" class="form-control" id="twitter" placeholder="Enter Twitter Account or type 'N/A'" value="{{user.twitter}}" name="twitter" required>
+                </div>
+
+                <!-- Editing Instagram -->
+                <div class="form-group">
+                    <label for="instagram">Instagram </label>
+                    <input type="text" class="form-control" id="instagram" placeholder="Enter Instagram Account or type 'N/A'" value= "{{user.instagram}}" name="instagram" required>
+                </div>
+
+                <!-- Editing Facebook -->
+                <div class="form-group">
+                    <label for="facebook">Facebook </label>
+                    <input type="text" class="form-control" id="facebook" placeholder="Enter Facebook Account or type 'N/A'" value="{{user.facebook}}" name="facebook" required>
+                </div>
+
+        <button type="submit" class="btn btn-primary">Apply Changes</button>
+        
+    </form>
+    </div>
+    {{!-- <script src="script-test.js"></script> for profile pic --}}
+    {{!-- <p><a href="/profile" target="_blank">View your profile</a></p> --}}
+    </body>
+</html>
