@@ -19,7 +19,7 @@ const authUtil = require('./utils/auth');
 const userRoutes = require('./routes/userRoutes');
 const ObjectID = require('mongodb').ObjectId;
 
-mongoose.connect("mongodb://localhost:27017/co_workbookFINAL", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://apdev@apdevmodule3.v9zuecf.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 
 passport.use(new Strategy(
     (username, password, done) => {
